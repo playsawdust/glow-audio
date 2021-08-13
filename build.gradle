@@ -49,18 +49,17 @@ def lwjgl(String... modules) {
 
 repositories {
 	mavenCentral()
-	//maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+	maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
 	maven { url 'https://jitpack.io' }
 }
 
 dependencies {
-	//api 'org.slf4j:slf4j-api:1.7.9'
-	runtimeOnly 'com.google.guava:guava:28.2-jre'
+	//runtimeOnly 'com.google.guava:guava:28.2-jre'
 	implementation 'com.google.guava:guava:28.2-jre'
-	//interface 'blue.endless:jankson:1.2.0'
-	runtimeOnly 'org.joml:joml:1.9.12'
+	//runtimeOnly 'org.joml:joml:1.9.12'
 	implementation 'org.joml:joml:1.9.12'
 	implementation 'com.github.playsawdust:glow-io:main-SNAPSHOT'
+	implementation 'com.github.falkreon:TinyEvents:main-SNAPSHOT'
 	
 	implementation lwjgl('openal')
 }
