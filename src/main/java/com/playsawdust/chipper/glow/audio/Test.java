@@ -45,12 +45,6 @@ public class Test {
 				listener.setVelocity(0, 0, 0);
 				listener.setOrientation(new Vector3f(0,0,-1), new Vector3f(0,1,0));
 				
-				//AudioBuffer buffer = audio.getBuffer(sample);
-				//int buffer = AL10.alGenBuffers();
-				//AL10.alBufferData(buffer, (sample.getChannelCount()==1) ? AL10.AL_FORMAT_MONO16 : AL10.AL_FORMAT_STEREO16, sample.getData(), sample.getFrequency());
-				
-				
-				
 				ALAudioSource source = audio.getSource().orElseThrow();
 				source.onStop().register(()->{System.out.println("STOP"); });
 				source.playSound(sample);
